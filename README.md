@@ -210,7 +210,7 @@ The Minecraft data come from the TECO dataset (W. Yan, D. Hafner, S. James, P. A
 ```bibtex
 @misc{usman2026wmselfaudit,
   author = {Muhammad Usman},
-  title  = {World Models Underestimate Their Own Drift: Unbiased Auditing from One Real Patch per Frame},
+  title  = {Measuring and Correcting Rollout Drift in Diffusion World Models with Sparse Real Observations},
   year   = {2026},
   url    = {https://github.com/MrUsmanAjmal/wm-selfaudit}
 }

@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this code or these results, please cite it as below."
-title: "World Models Underestimate Their Own Drift: Unbiased Auditing from One Real Patch per Frame"
+title: "Measuring and Correcting Rollout Drift in Diffusion World Models with Sparse Real Observations"
 authors:
   - family-names: Usman
     given-names: Muhammad
