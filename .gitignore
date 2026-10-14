@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+
+# model checkpoints, raw rollouts and archives (too large for git)
+*.ckpt
+*.pth
+*.tar.gz
+*.zip
+wm_audit_data/
+diffusion-forcing/
+
+# local Python environments
+.venv/
+venv/
+env/

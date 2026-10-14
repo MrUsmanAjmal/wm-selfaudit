@@ -1,0 +1,160 @@
+/usr/local/lib/python3.13/dist-packages/lightning/fabric/__init__.py:40: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+/usr/local/lib/python3.13/dist-packages/hydra/_internal/defaults_list.py:251: UserWarning: In 'config': Defaults list is missing `_self_`. See https://hydra.cc/docs/1.2/upgrades/1.0_to_1.1/default_composition_order for more information
+  warnings.warn(msg, UserWarning)
+Using 16bit Automatic Mixed Precision (AMP)
+/usr/local/lib/python3.13/dist-packages/lightning/pytorch/plugins/precision/amp.py:54: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+`Trainer(limit_val_batches=1)` was configured so 1 batch will be used.
+wandb: WARNING `resume` will be ignored since W&B syncing is set to `offline`. Starting a new run with run id itfnuf10.
+wandb: Tracking run with wandb version 0.17.9
+wandb: W&B syncing is set to `offline` in this directory.  
+wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+Restoring states from the checkpoint path at outputs/minecraft.ckpt
+/usr/local/lib/python3.13/dist-packages/lightning/fabric/utilities/cloud_io.py:56: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+/usr/local/lib/python3.13/dist-packages/lightning/pytorch/utilities/migration/utils.py:55: The loaded checkpoint was produced with Lightning v2.3.2, which is newer than your current Lightning version: v2.1.4
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Loaded model weights from the checkpoint at outputs/minecraft.ckpt
+/usr/local/lib/python3.13/dist-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+Non-A100 GPU detected, using math or mem efficient attention if input tensor is on cuda
+
+Validation: |          | 0/? [00:00<?, ?it/s]
+Validation:   0%|          | 0/1 [00:00<?, ?it/s]
+Validation DataLoader 0:   0%|          | 0/1 [00:00<?, ?it/s]
+
+Sampling:  10%|█         | 2/20 [00:00<?, ?it/s][A
+
+Sampling:  10%|█         | 2/20 [00:00<?, ?it/s, start=0, end=3][A
+
+Sampling:  15%|█▌        | 3/20 [00:38<10:48, 38.17s/it, start=0, end=3][A
+
+Sampling:  15%|█▌        | 3/20 [00:38<10:48, 38.17s/it, start=0, end=4][A
+
+Sampling:  20%|██        | 4/20 [01:28<12:09, 45.60s/it, start=0, end=4][A
+
+Sampling:  20%|██        | 4/20 [01:28<12:09, 45.60s/it, start=0, end=5][A
+
+Sampling:  25%|██▌       | 5/20 [02:34<13:38, 54.57s/it, start=0, end=5][A
+
+Sampling:  25%|██▌       | 5/20 [02:34<13:38, 54.57s/it, start=0, end=6][A
+
+Sampling:  30%|███       | 6/20 [03:52<14:56, 64.04s/it, start=0, end=6][A
+
+Sampling:  30%|███       | 6/20 [03:52<14:56, 64.04s/it, start=0, end=7][A
+
+Sampling:  35%|███▌      | 7/20 [05:24<16:04, 74.16s/it, start=0, end=7][A
+
+Sampling:  35%|███▌      | 7/20 [05:24<16:04, 74.16s/it, start=0, end=8][A
+
+Sampling:  40%|████      | 8/20 [07:09<16:56, 84.68s/it, start=0, end=8][A
+
+Sampling:  40%|████      | 8/20 [07:09<16:56, 84.68s/it, start=0, end=9][A
+
+Sampling:  45%|████▌     | 9/20 [09:09<17:37, 96.14s/it, start=0, end=9][A
+
+Sampling:  45%|████▌     | 9/20 [09:09<17:37, 96.14s/it, start=0, end=10][A
+
+Sampling:  50%|█████     | 10/20 [11:23<18:00, 108.09s/it, start=0, end=10][A
+
+Sampling:  50%|█████     | 10/20 [11:23<18:00, 108.09s/it, start=1, end=11][A
+
+Sampling:  55%|█████▌    | 11/20 [13:37<17:24, 116.07s/it, start=1, end=11][A
+
+Sampling:  55%|█████▌    | 11/20 [13:37<17:24, 116.07s/it, start=2, end=12][A
+
+Sampling:  60%|██████    | 12/20 [15:50<16:11, 121.48s/it, start=2, end=12][A
+
+Sampling:  60%|██████    | 12/20 [15:50<16:11, 121.48s/it, start=3, end=13][A
+
+Sampling:  65%|██████▌   | 13/20 [18:04<14:36, 125.19s/it, start=3, end=13][A
+
+Sampling:  65%|██████▌   | 13/20 [18:04<14:36, 125.19s/it, start=4, end=14][A
+
+Sampling:  70%|███████   | 14/20 [20:17<12:46, 127.78s/it, start=4, end=14][A
+
+Sampling:  70%|███████   | 14/20 [20:17<12:46, 127.78s/it, start=5, end=15][A
+
+Sampling:  75%|███████▌  | 15/20 [22:31<10:47, 129.55s/it, start=5, end=15][A
+
+Sampling:  75%|███████▌  | 15/20 [22:31<10:47, 129.55s/it, start=6, end=16][A
+
+Sampling:  80%|████████  | 16/20 [24:45<08:43, 130.77s/it, start=6, end=16][A
+
+Sampling:  80%|████████  | 16/20 [24:45<08:43, 130.77s/it, start=7, end=17][A
+
+Sampling:  85%|████████▌ | 17/20 [26:58<06:34, 131.62s/it, start=7, end=17][A
+
+Sampling:  85%|████████▌ | 17/20 [26:58<06:34, 131.62s/it, start=8, end=18][A
+
+Sampling:  90%|█████████ | 18/20 [29:12<04:24, 132.24s/it, start=8, end=18][A
+
+Sampling:  90%|█████████ | 18/20 [29:12<04:24, 132.24s/it, start=9, end=19][A
+
+Sampling:  95%|█████████▌| 19/20 [31:26<02:12, 132.66s/it, start=9, end=19][A
+
+Sampling:  95%|█████████▌| 19/20 [31:26<02:12, 132.66s/it, start=10, end=20][A
+
+Sampling: 100%|██████████| 20/20 [33:39<00:00, 132.88s/it, start=10, end=20][A
+Sampling: 100%|██████████| 20/20 [33:39<00:00, 112.19s/it, start=10, end=20]
+
+Validation DataLoader 0: 100%|██████████| 1/1 [33:39<00:00,  0.00it/s][dump] saved /kaggle/working/wm_audit_data/feedback_guided/run_0/batch_000.npz with shape (20, 8, 3, 128, 128), gaze 'guided'
+/usr/local/lib/python3.13/dist-packages/moviepy/config_defaults.py:47: SyntaxWarning: invalid escape sequence '\P'
+  IMAGEMAGICK_BINARY = r"C:\Program Files\ImageMagick-6.8.8-Q16\magick.exe"
+/usr/local/lib/python3.13/dist-packages/moviepy/video/io/ffmpeg_reader.py:294: SyntaxWarning: invalid escape sequence '\d'
+  lines_video = [l for l in lines if ' Video: ' in l and re.search('\d+x\d+', l)]
+/usr/local/lib/python3.13/dist-packages/moviepy/video/io/ffmpeg_reader.py:367: SyntaxWarning: invalid escape sequence '\d'
+  rotation_lines = [l for l in lines if 'rotate          :' in l and re.search('\d+$', l)]
+/usr/local/lib/python3.13/dist-packages/moviepy/video/io/ffmpeg_reader.py:370: SyntaxWarning: invalid escape sequence '\d'
+  match = re.search('\d+$', rotation_line)
+[2026-10-13 07:39:55,755][py.warnings][WARNING] - /usr/local/lib/python3.13/dist-packages/moviepy/video/io/sliders.py:61: SyntaxWarning: "is" with 'str' literal. Did you mean "=="?
+  if event.key is 'enter':
+
+error: XDG_RUNTIME_DIR is invalid or not set in the environment.
+ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5731:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2721:(snd_pcm_open_noupdate) Unknown PCM default
+ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5731:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2721:(snd_pcm_open_noupdate) Unknown PCM default
+
+Validation DataLoader 0: 100%|██████████| 1/1 [33:50<00:00,  0.00it/s]
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃      Validate metric      ┃       DataLoader 0        ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│      validation/mse       │    0.04578424245119095    │
+│      validation/psnr      │    19.413440704345703     │
+│      validation/ssim      │    0.6102664470672607     │
+│      validation/uiqi      │           -inf            │
+└───────────────────────────┴───────────────────────────┘
+wandb: 
+wandb: Run history:
+wandb:               epoch ▁
+wandb: trainer/global_step ▁▁▁▁▁▁▁▁▁
+wandb:      validation/mse ▁
+wandb:     validation/psnr ▁
+wandb:     validation/ssim ▁
+wandb: 
+wandb: Run summary:
+wandb:               epoch 0
+wandb: trainer/global_step 0
+wandb:      validation/mse 0.04578
+wandb:     validation/psnr 19.41344
+wandb:     validation/ssim 0.61027
+wandb:     validation/uiqi -inf
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /tmp/diffusion-forcing/outputs/wm_audit/gpu0/jobs/feedback_guided_r0_b0/wandb/offline-run-20261013_070610-itfnuf10
+wandb: Find logs at: ./outputs/wm_audit/gpu0/jobs/feedback_guided_r0_b0/wandb/offline-run-20261013_070610-itfnuf10/logs
+wandb: WARNING The new W&B backend becomes opt-out in version 0.18.0; try it out with `wandb.require("core")`! See https://wandb.me/wandb-core for more information.

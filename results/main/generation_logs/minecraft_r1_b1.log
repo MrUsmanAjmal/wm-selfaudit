@@ -1,0 +1,159 @@
+/usr/local/lib/python3.13/dist-packages/torchmetrics/utilities/imports.py:22: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import DistributionNotFound, get_distribution
+/usr/local/lib/python3.13/dist-packages/hydra/_internal/defaults_list.py:251: UserWarning: In 'config': Defaults list is missing `_self_`. See https://hydra.cc/docs/1.2/upgrades/1.0_to_1.1/default_composition_order for more information
+  warnings.warn(msg, UserWarning)
+INFO: Using 16bit Automatic Mixed Precision (AMP)
+Non-A100 GPU detected, using math or mem efficient attention if input tensor is on cuda
+[2026-10-11 21:22:08,444][lightning.pytorch.utilities.rank_zero][INFO] - Using 16bit Automatic Mixed Precision (AMP)
+/usr/local/lib/python3.13/dist-packages/lightning/pytorch/plugins/precision/amp.py:54: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+INFO: GPU available: True (cuda), used: True
+[2026-10-11 21:22:08,504][lightning.pytorch.utilities.rank_zero][INFO] - GPU available: True (cuda), used: True
+INFO: TPU available: False, using: 0 TPU cores
+[2026-10-11 21:22:08,505][lightning.pytorch.utilities.rank_zero][INFO] - TPU available: False, using: 0 TPU cores
+INFO: IPU available: False, using: 0 IPUs
+[2026-10-11 21:22:08,505][lightning.pytorch.utilities.rank_zero][INFO] - IPU available: False, using: 0 IPUs
+INFO: HPU available: False, using: 0 HPUs
+[2026-10-11 21:22:08,505][lightning.pytorch.utilities.rank_zero][INFO] - HPU available: False, using: 0 HPUs
+INFO: `Trainer(limit_val_batches=1)` was configured so 1 batch will be used.
+[2026-10-11 21:22:08,506][lightning.pytorch.utilities.rank_zero][INFO] - `Trainer(limit_val_batches=1)` was configured so 1 batch will be used.
+wandb: WARNING `resume` will be ignored since W&B syncing is set to `offline`. Starting a new run with run id w0cknuj3.
+wandb: Tracking run with wandb version 0.17.9
+wandb: W&B syncing is set to `offline` in this directory.  
+wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+INFO: Restoring states from the checkpoint path at outputs/minecraft.ckpt
+[2026-10-11 21:22:10,530][lightning.pytorch.utilities.rank_zero][INFO] - Restoring states from the checkpoint path at outputs/minecraft.ckpt
+/usr/local/lib/python3.13/dist-packages/lightning/fabric/utilities/cloud_io.py:56: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+/usr/local/lib/python3.13/dist-packages/lightning/pytorch/utilities/migration/utils.py:55: The loaded checkpoint was produced with Lightning v2.3.2, which is newer than your current Lightning version: v2.1.4
+INFO: LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [1]
+[2026-10-11 21:22:11,020][lightning.pytorch.accelerators.cuda][INFO] - LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [1]
+INFO: Loaded model weights from the checkpoint at outputs/minecraft.ckpt
+[2026-10-11 21:22:11,021][lightning.pytorch.utilities.rank_zero][INFO] - Loaded model weights from the checkpoint at outputs/minecraft.ckpt
+/usr/local/lib/python3.13/dist-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+
+Validation: |          | 0/? [00:00<?, ?it/s]
+Validation:   0%|          | 0/1 [00:00<?, ?it/s]
+Validation DataLoader 0:   0%|          | 0/1 [00:00<?, ?it/s]
+
+Sampling:  10%|█         | 2/20 [00:00<?, ?it/s][A
+
+Sampling:  10%|█         | 2/20 [00:00<?, ?it/s, start=0, end=3][A
+
+Sampling:  15%|█▌        | 3/20 [00:39<11:18, 39.90s/it, start=0, end=3][A
+
+Sampling:  15%|█▌        | 3/20 [00:39<11:18, 39.90s/it, start=0, end=4][A
+
+Sampling:  20%|██        | 4/20 [01:33<12:50, 48.14s/it, start=0, end=4][A
+
+Sampling:  20%|██        | 4/20 [01:33<12:50, 48.14s/it, start=0, end=5][A
+
+Sampling:  25%|██▌       | 5/20 [02:45<14:44, 58.99s/it, start=0, end=5][A
+
+Sampling:  25%|██▌       | 5/20 [02:45<14:44, 58.99s/it, start=0, end=6][A
+
+Sampling:  30%|███       | 6/20 [04:12<16:20, 70.00s/it, start=0, end=6][A
+
+Sampling:  30%|███       | 6/20 [04:12<16:20, 70.00s/it, start=0, end=7][A
+
+Sampling:  35%|███▌      | 7/20 [05:53<17:36, 81.25s/it, start=0, end=7][A
+
+Sampling:  35%|███▌      | 7/20 [05:53<17:36, 81.25s/it, start=0, end=8][A
+
+Sampling:  40%|████      | 8/20 [07:48<18:31, 92.63s/it, start=0, end=8][A
+
+Sampling:  40%|████      | 8/20 [07:48<18:31, 92.63s/it, start=0, end=9][A
+
+Sampling:  45%|████▌     | 9/20 [10:00<19:21, 105.57s/it, start=0, end=9][A
+
+Sampling:  45%|████▌     | 9/20 [10:00<19:21, 105.57s/it, start=0, end=10][A
+
+Sampling:  50%|█████     | 10/20 [12:28<19:49, 118.98s/it, start=0, end=10][A
+
+Sampling:  50%|█████     | 10/20 [12:28<19:49, 118.98s/it, start=1, end=11][A
+
+Sampling:  55%|█████▌    | 11/20 [14:55<19:09, 127.72s/it, start=1, end=11][A
+
+Sampling:  55%|█████▌    | 11/20 [14:55<19:09, 127.72s/it, start=2, end=12][A
+
+Sampling:  60%|██████    | 12/20 [17:22<17:49, 133.63s/it, start=2, end=12][A
+
+Sampling:  60%|██████    | 12/20 [17:22<17:49, 133.63s/it, start=3, end=13][A
+
+Sampling:  65%|██████▌   | 13/20 [19:49<16:05, 137.96s/it, start=3, end=13][A
+
+Sampling:  65%|██████▌   | 13/20 [19:49<16:05, 137.96s/it, start=4, end=14][A
+
+Sampling:  70%|███████   | 14/20 [22:17<14:04, 140.79s/it, start=4, end=14][A
+
+Sampling:  70%|███████   | 14/20 [22:17<14:04, 140.79s/it, start=5, end=15][A
+
+Sampling:  75%|███████▌  | 15/20 [24:43<11:52, 142.59s/it, start=5, end=15][A
+
+Sampling:  75%|███████▌  | 15/20 [24:43<11:52, 142.59s/it, start=6, end=16][A
+
+Sampling:  80%|████████  | 16/20 [27:11<09:36, 144.15s/it, start=6, end=16][A
+
+Sampling:  80%|████████  | 16/20 [27:11<09:36, 144.15s/it, start=7, end=17][A
+
+Sampling:  85%|████████▌ | 17/20 [29:39<07:15, 145.26s/it, start=7, end=17][A
+
+Sampling:  85%|████████▌ | 17/20 [29:39<07:15, 145.26s/it, start=8, end=18][A
+
+Sampling:  90%|█████████ | 18/20 [32:07<04:52, 146.03s/it, start=8, end=18][A
+
+Sampling:  90%|█████████ | 18/20 [32:07<04:52, 146.03s/it, start=9, end=19][A
+
+Sampling:  95%|█████████▌| 19/20 [34:34<02:26, 146.50s/it, start=9, end=19][A
+
+Sampling:  95%|█████████▌| 19/20 [34:34<02:26, 146.50s/it, start=10, end=20][A
+
+Sampling: 100%|██████████| 20/20 [37:01<00:00, 146.53s/it, start=10, end=20][A
+Sampling: 100%|██████████| 20/20 [37:03<00:00, 123.50s/it, start=10, end=20]
+
+Validation DataLoader 0: 100%|██████████| 1/1 [37:03<00:00,  0.00it/s][dump] saved /kaggle/working/wm_audit_data/minecraft/run_1/batch_001.npz with shape (20, 8, 3, 128, 128)
+error: XDG_RUNTIME_DIR is invalid or not set in the environment.
+ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5731:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2721:(snd_pcm_open_noupdate) Unknown PCM default
+ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5731:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2721:(snd_pcm_open_noupdate) Unknown PCM default
+
+Validation DataLoader 0: 100%|██████████| 1/1 [37:13<00:00,  0.00it/s]
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃      Validate metric      ┃       DataLoader 0        ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│      validation/mse       │   0.054717645049095154    │
+│      validation/psnr      │    18.639326095581055     │
+│      validation/ssim      │     0.615767776966095     │
+│      validation/uiqi      │           -inf            │
+└───────────────────────────┴───────────────────────────┘
+wandb: 
+wandb: Run history:
+wandb:               epoch ▁
+wandb: trainer/global_step ▁▁▁▁▁▁▁▁▁
+wandb:      validation/mse ▁
+wandb:     validation/psnr ▁
+wandb:     validation/ssim ▁
+wandb: 
+wandb: Run summary:
+wandb:               epoch 0
+wandb: trainer/global_step 0
+wandb:      validation/mse 0.05472
+wandb:     validation/psnr 18.63933
+wandb:     validation/ssim 0.61577
+wandb:     validation/uiqi -inf
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /tmp/diffusion-forcing/outputs/wm_audit/gpu1/jobs/minecraft_r1_b1/wandb/offline-run-20261011_212209-w0cknuj3
+wandb: Find logs at: ./outputs/wm_audit/gpu1/jobs/minecraft_r1_b1/wandb/offline-run-20261011_212209-w0cknuj3/logs
+wandb: WARNING The new W&B backend becomes opt-out in version 0.18.0; try it out with `wandb.require("core")`! See https://wandb.me/wandb-core for more information.

@@ -1,0 +1,137 @@
+{
+  "baseline": "seaquest",
+  "clips": 32,
+  "videos": 32,
+  "runs": {
+    "seaquest": 3,
+    "seaquest_fb_guided": 2,
+    "seaquest_fb_random": 2,
+    "seaquest_fb_oracle": 2
+  },
+  "bins": {
+    "all": {
+      "seaquest_fb_guided": {
+        "drift": 0.00010743126040324569,
+        "baseline_drift": 0.00015666073886677623,
+        "ratio": 0.6857573986053467,
+        "ratio_ci": [
+          0.5911941528320312,
+          0.7810071110725403
+        ],
+        "clips_improved": 0.9375
+      },
+      "seaquest_fb_random": {
+        "drift": 0.00011962289863731712,
+        "baseline_drift": 0.00015666073886677623,
+        "ratio": 0.7635793089866638,
+        "ratio_ci": [
+          0.6872897148132324,
+          0.836894154548645
+        ],
+        "clips_improved": 0.9375
+      },
+      "seaquest_fb_oracle": {
+        "drift": 4.075902688782662e-05,
+        "baseline_drift": 0.00015666073886677623,
+        "ratio": 0.26017385721206665,
+        "ratio_ci": [
+          0.20595914125442505,
+          0.32589080929756165
+        ],
+        "clips_improved": 1.0
+      }
+    },
+    "within": {
+      "seaquest_fb_guided": {
+        "drift": 6.893890531500801e-05,
+        "baseline_drift": 8.74694887897931e-05,
+        "ratio": 0.788148045539856,
+        "ratio_ci": [
+          0.7158036231994629,
+          0.8491000533103943
+        ],
+        "clips_improved": 1.0
+      },
+      "seaquest_fb_random": {
+        "drift": 7.660369738005102e-05,
+        "baseline_drift": 8.74694887897931e-05,
+        "ratio": 0.8757762312889099,
+        "ratio_ci": [
+          0.8176279664039612,
+          0.9365131855010986
+        ],
+        "clips_improved": 0.9375
+      },
+      "seaquest_fb_oracle": {
+        "drift": 3.2817017199704424e-05,
+        "baseline_drift": 8.74694887897931e-05,
+        "ratio": 0.37518244981765747,
+        "ratio_ci": [
+          0.29840531945228577,
+          0.46533331274986267
+        ],
+        "clips_improved": 1.0
+      }
+    },
+    "beyond": {
+      "seaquest_fb_guided": {
+        "drift": 0.00014592360821552575,
+        "baseline_drift": 0.0002258519671158865,
+        "ratio": 0.6461029052734375,
+        "ratio_ci": [
+          0.5339764952659607,
+          0.7674297094345093
+        ],
+        "clips_improved": 0.90625
+      },
+      "seaquest_fb_random": {
+        "drift": 0.000162642085342668,
+        "baseline_drift": 0.0002258519671158865,
+        "ratio": 0.7201269268989563,
+        "ratio_ci": [
+          0.6196435689926147,
+          0.8136044144630432
+        ],
+        "clips_improved": 0.9375
+      },
+      "seaquest_fb_oracle": {
+        "drift": 4.8701040213927627e-05,
+        "baseline_drift": 0.0002258519671158865,
+        "ratio": 0.2156325727701187,
+        "ratio_ci": [
+          0.16253618896007538,
+          0.2788843512535095
+        ],
+        "clips_improved": 1.0
+      }
+    }
+  },
+  "online_audit": {
+    "seaquest_fb_guided": {
+      "rollouts": 64,
+      "bias_pct": -1.9163725550556232,
+      "bias_ci": [
+        -21.99325249502805,
+        25.23292407494743
+      ],
+      "rel_rmse_pct": 72.17003228706022,
+      "rmse_ci": [
+        43.63064192971687,
+        102.81306381984236
+      ]
+    },
+    "seaquest_fb_random": {
+      "rollouts": 64,
+      "bias_pct": -1.2905877186526915,
+      "bias_ci": [
+        -13.223717469578116,
+        11.840537304430462
+      ],
+      "rel_rmse_pct": 57.864940729552785,
+      "rmse_ci": [
+        46.05631131229419,
+        69.24583831899393
+      ]
+    }
+  }
+}

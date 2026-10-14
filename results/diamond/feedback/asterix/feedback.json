@@ -1,0 +1,137 @@
+{
+  "baseline": "asterix",
+  "clips": 32,
+  "videos": 32,
+  "runs": {
+    "asterix": 3,
+    "asterix_fb_guided": 2,
+    "asterix_fb_random": 2,
+    "asterix_fb_oracle": 2
+  },
+  "bins": {
+    "all": {
+      "asterix_fb_guided": {
+        "drift": 0.0005566956824623048,
+        "baseline_drift": 0.0010134342592209578,
+        "ratio": 0.5493160486221313,
+        "ratio_ci": [
+          0.4718153476715088,
+          0.6214942932128906
+        ],
+        "clips_improved": 1.0
+      },
+      "asterix_fb_random": {
+        "drift": 0.0006153936847113073,
+        "baseline_drift": 0.0010134342592209578,
+        "ratio": 0.6072359085083008,
+        "ratio_ci": [
+          0.546784520149231,
+          0.6727486252784729
+        ],
+        "clips_improved": 1.0
+      },
+      "asterix_fb_oracle": {
+        "drift": 9.325715654995292e-05,
+        "baseline_drift": 0.0010134342592209578,
+        "ratio": 0.0920209214091301,
+        "ratio_ci": [
+          0.07106338441371918,
+          0.11599782109260559
+        ],
+        "clips_improved": 1.0
+      }
+    },
+    "within": {
+      "asterix_fb_guided": {
+        "drift": 0.0003707228461280465,
+        "baseline_drift": 0.0005705221556127071,
+        "ratio": 0.6497957110404968,
+        "ratio_ci": [
+          0.542560338973999,
+          0.7544576525688171
+        ],
+        "clips_improved": 1.0
+      },
+      "asterix_fb_random": {
+        "drift": 0.00041271199006587267,
+        "baseline_drift": 0.0005705221556127071,
+        "ratio": 0.723393440246582,
+        "ratio_ci": [
+          0.651093065738678,
+          0.807124674320221
+        ],
+        "clips_improved": 0.9375
+      },
+      "asterix_fb_oracle": {
+        "drift": 8.895459905033931e-05,
+        "baseline_drift": 0.0005705221556127071,
+        "ratio": 0.15591786801815033,
+        "ratio_ci": [
+          0.12073730677366257,
+          0.19430452585220337
+        ],
+        "clips_improved": 1.0
+      }
+    },
+    "beyond": {
+      "asterix_fb_guided": {
+        "drift": 0.0007426684605889022,
+        "baseline_drift": 0.0014563461299985647,
+        "ratio": 0.5099532604217529,
+        "ratio_ci": [
+          0.42020562291145325,
+          0.5969535112380981
+        ],
+        "clips_improved": 0.96875
+      },
+      "asterix_fb_random": {
+        "drift": 0.0008180754375644028,
+        "baseline_drift": 0.0014563461299985647,
+        "ratio": 0.5617314577102661,
+        "ratio_ci": [
+          0.4968333840370178,
+          0.6327393651008606
+        ],
+        "clips_improved": 1.0
+      },
+      "asterix_fb_oracle": {
+        "drift": 9.755970677360892e-05,
+        "baseline_drift": 0.0014563461299985647,
+        "ratio": 0.06698936969041824,
+        "ratio_ci": [
+          0.04401140660047531,
+          0.09522735327482224
+        ],
+        "clips_improved": 1.0
+      }
+    }
+  },
+  "online_audit": {
+    "asterix_fb_guided": {
+      "rollouts": 64,
+      "bias_pct": -3.4285469519784173,
+      "bias_ci": [
+        -24.92787701996058,
+        18.936509551537434
+      ],
+      "rel_rmse_pct": 96.99144688508349,
+      "rmse_ci": [
+        58.8997599872488,
+        136.05140205195738
+      ]
+    },
+    "asterix_fb_random": {
+      "rollouts": 64,
+      "bias_pct": 10.456363610550245,
+      "bias_ci": [
+        -4.182743913532044,
+        24.070476343678973
+      ],
+      "rel_rmse_pct": 60.91652335456841,
+      "rmse_ci": [
+        50.17131346115668,
+        71.4109439038254
+      ]
+    }
+  }
+}

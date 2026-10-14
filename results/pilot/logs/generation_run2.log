@@ -1,0 +1,119 @@
+/usr/local/lib/python3.13/dist-packages/torchmetrics/utilities/imports.py:22: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import DistributionNotFound, get_distribution
+/usr/local/lib/python3.13/dist-packages/hydra/_internal/defaults_list.py:251: UserWarning: In 'config': Defaults list is missing `_self_`. See https://hydra.cc/docs/1.2/upgrades/1.0_to_1.1/default_composition_order for more information
+  warnings.warn(msg, UserWarning)
+INFO: Using 16bit Automatic Mixed Precision (AMP)
+Non-A100 GPU detected, using math or mem efficient attention if input tensor is on cuda
+[2026-10-07 10:47:47,061][lightning.pytorch.utilities.rank_zero][INFO] - Using 16bit Automatic Mixed Precision (AMP)
+/usr/local/lib/python3.13/dist-packages/lightning/pytorch/plugins/precision/amp.py:54: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+INFO: GPU available: True (cuda), used: True
+[2026-10-07 10:47:47,121][lightning.pytorch.utilities.rank_zero][INFO] - GPU available: True (cuda), used: True
+INFO: TPU available: False, using: 0 TPU cores
+[2026-10-07 10:47:47,122][lightning.pytorch.utilities.rank_zero][INFO] - TPU available: False, using: 0 TPU cores
+INFO: IPU available: False, using: 0 IPUs
+[2026-10-07 10:47:47,122][lightning.pytorch.utilities.rank_zero][INFO] - IPU available: False, using: 0 IPUs
+INFO: HPU available: False, using: 0 HPUs
+[2026-10-07 10:47:47,122][lightning.pytorch.utilities.rank_zero][INFO] - HPU available: False, using: 0 HPUs
+INFO: `Trainer(limit_val_batches=1)` was configured so 1 batch will be used.
+[2026-10-07 10:47:47,122][lightning.pytorch.utilities.rank_zero][INFO] - `Trainer(limit_val_batches=1)` was configured so 1 batch will be used.
+wandb: WARNING `resume` will be ignored since W&B syncing is set to `offline`. Starting a new run with run id 8qi4rst4.
+wandb: Tracking run with wandb version 0.17.9
+wandb: W&B syncing is set to `offline` in this directory.  
+wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+INFO: Restoring states from the checkpoint path at outputs/minecraft.ckpt
+[2026-10-07 10:47:48,990][lightning.pytorch.utilities.rank_zero][INFO] - Restoring states from the checkpoint path at outputs/minecraft.ckpt
+/usr/local/lib/python3.13/dist-packages/lightning/fabric/utilities/cloud_io.py:56: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+/usr/local/lib/python3.13/dist-packages/lightning/pytorch/utilities/migration/utils.py:55: The loaded checkpoint was produced with Lightning v2.3.2, which is newer than your current Lightning version: v2.1.4
+INFO: LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[2026-10-07 10:47:49,442][lightning.pytorch.accelerators.cuda][INFO] - LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+INFO: Loaded model weights from the checkpoint at outputs/minecraft.ckpt
+[2026-10-07 10:47:49,443][lightning.pytorch.utilities.rank_zero][INFO] - Loaded model weights from the checkpoint at outputs/minecraft.ckpt
+/usr/local/lib/python3.13/dist-packages/lightning/pytorch/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+
+Validation: |          | 0/? [00:00<?, ?it/s]
+Validation:   0%|          | 0/1 [00:00<?, ?it/s]
+Validation DataLoader 0:   0%|          | 0/1 [00:00<?, ?it/s]
+
+Sampling:  20%|██        | 2/10 [00:00<?, ?it/s][A
+
+Sampling:  20%|██        | 2/10 [00:00<?, ?it/s, start=0, end=3][A
+
+Sampling:  30%|███       | 3/10 [01:25<09:59, 85.64s/it, start=0, end=3][A
+
+Sampling:  30%|███       | 3/10 [01:25<09:59, 85.64s/it, start=0, end=4][A
+
+Sampling:  40%|████      | 4/10 [03:19<10:12, 102.11s/it, start=0, end=4][A
+
+Sampling:  40%|████      | 4/10 [03:19<10:12, 102.11s/it, start=0, end=5][A
+
+Sampling:  50%|█████     | 5/10 [05:42<10:04, 120.84s/it, start=0, end=5][A
+
+Sampling:  50%|█████     | 5/10 [05:42<10:04, 120.84s/it, start=0, end=6][A
+
+Sampling:  60%|██████    | 6/10 [08:36<09:26, 141.74s/it, start=0, end=6][A
+
+Sampling:  60%|██████    | 6/10 [08:36<09:26, 141.74s/it, start=0, end=7][A
+
+Sampling:  70%|███████   | 7/10 [12:00<08:13, 164.34s/it, start=0, end=7][A
+
+Sampling:  70%|███████   | 7/10 [12:00<08:13, 164.34s/it, start=0, end=8][A
+
+Sampling:  80%|████████  | 8/10 [15:53<06:15, 187.60s/it, start=0, end=8][A
+
+Sampling:  80%|████████  | 8/10 [15:53<06:15, 187.60s/it, start=0, end=9][A
+
+Sampling:  90%|█████████ | 9/10 [20:20<03:33, 213.46s/it, start=0, end=9][A
+
+Sampling:  90%|█████████ | 9/10 [20:20<03:33, 213.46s/it, start=0, end=10][A
+
+Sampling: 100%|██████████| 10/10 [25:16<00:00, 239.99s/it, start=0, end=10][A
+Sampling: 100%|██████████| 10/10 [25:18<00:00, 189.79s/it, start=0, end=10]
+
+Validation DataLoader 0: 100%|██████████| 1/1 [25:18<00:00,  0.00it/s][dump] saved /kaggle/working/wm_audit_data/run_2/batch_000.npz with shape (10, 8, 3, 128, 128)
+error: XDG_RUNTIME_DIR is invalid or not set in the environment.
+ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5731:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2721:(snd_pcm_open_noupdate) Unknown PCM default
+ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5731:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2721:(snd_pcm_open_noupdate) Unknown PCM default
+
+Validation DataLoader 0: 100%|██████████| 1/1 [25:23<00:00,  0.00it/s]
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃      Validate metric      ┃       DataLoader 0        ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│      validation/mse       │    0.02666504867374897    │
+│      validation/psnr      │     21.76117515563965     │
+│      validation/ssim      │    0.6157951354980469     │
+│      validation/uiqi      │           -inf            │
+└───────────────────────────┴───────────────────────────┘
+wandb: 
+wandb: Run history:
+wandb:               epoch ▁
+wandb: trainer/global_step ▁▁▁▁▁▁▁▁▁
+wandb:      validation/mse ▁
+wandb:     validation/psnr ▁
+wandb:     validation/ssim ▁
+wandb: 
+wandb: Run summary:
+wandb:               epoch 0
+wandb: trainer/global_step 0
+wandb:      validation/mse 0.02667
+wandb:     validation/psnr 21.76118
+wandb:     validation/ssim 0.6158
+wandb:     validation/uiqi -inf
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /kaggle/working/diffusion-forcing/outputs/2026-10-07/10-47-41/wandb/offline-run-20261007_104748-8qi4rst4
+wandb: Find logs at: ./outputs/2026-10-07/10-47-41/wandb/offline-run-20261007_104748-8qi4rst4/logs
+wandb: WARNING The new W&B backend becomes opt-out in version 0.18.0; try it out with `wandb.require("core")`! See https://wandb.me/wandb-core for more information.

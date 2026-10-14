@@ -1,0 +1,137 @@
+{
+  "baseline": "freeway",
+  "clips": 32,
+  "videos": 32,
+  "runs": {
+    "freeway": 3,
+    "freeway_fb_guided": 2,
+    "freeway_fb_random": 2,
+    "freeway_fb_oracle": 2
+  },
+  "bins": {
+    "all": {
+      "freeway_fb_guided": {
+        "drift": 2.8347621991997585e-05,
+        "baseline_drift": 4.088887362740934e-05,
+        "ratio": 0.6932845115661621,
+        "ratio_ci": [
+          0.5878505706787109,
+          0.8080079555511475
+        ],
+        "clips_improved": 1.0
+      },
+      "freeway_fb_random": {
+        "drift": 3.3292093576164916e-05,
+        "baseline_drift": 4.088887362740934e-05,
+        "ratio": 0.8142091035842896,
+        "ratio_ci": [
+          0.7655898928642273,
+          0.8680586218833923
+        ],
+        "clips_improved": 1.0
+      },
+      "freeway_fb_oracle": {
+        "drift": 1.7070437024813145e-05,
+        "baseline_drift": 4.088887362740934e-05,
+        "ratio": 0.4174836575984955,
+        "ratio_ci": [
+          0.333776593208313,
+          0.5448251366615295
+        ],
+        "clips_improved": 1.0
+      }
+    },
+    "within": {
+      "freeway_fb_guided": {
+        "drift": 2.1071027731522918e-05,
+        "baseline_drift": 2.6666337362257764e-05,
+        "ratio": 0.7901732921600342,
+        "ratio_ci": [
+          0.680659294128418,
+          0.9242215752601624
+        ],
+        "clips_improved": 1.0
+      },
+      "freeway_fb_random": {
+        "drift": 2.4304259568452835e-05,
+        "baseline_drift": 2.6666337362257764e-05,
+        "ratio": 0.911421000957489,
+        "ratio_ci": [
+          0.862103283405304,
+          0.9534031748771667
+        ],
+        "clips_improved": 1.0
+      },
+      "freeway_fb_oracle": {
+        "drift": 1.4335842024593148e-05,
+        "baseline_drift": 2.6666337362257764e-05,
+        "ratio": 0.5376006960868835,
+        "ratio_ci": [
+          0.4196467399597168,
+          0.7223411202430725
+        ],
+        "clips_improved": 1.0
+      }
+    },
+    "beyond": {
+      "freeway_fb_guided": {
+        "drift": 3.5624212614493445e-05,
+        "baseline_drift": 5.5111409892560914e-05,
+        "ratio": 0.6464035511016846,
+        "ratio_ci": [
+          0.5295393466949463,
+          0.7700003385543823
+        ],
+        "clips_improved": 1.0
+      },
+      "freeway_fb_random": {
+        "drift": 4.2279927583877e-05,
+        "baseline_drift": 5.5111409892560914e-05,
+        "ratio": 0.7671719193458557,
+        "ratio_ci": [
+          0.7115679979324341,
+          0.8343091011047363
+        ],
+        "clips_improved": 1.0
+      },
+      "freeway_fb_oracle": {
+        "drift": 1.9805032934527844e-05,
+        "baseline_drift": 5.5111409892560914e-05,
+        "ratio": 0.3593635559082031,
+        "ratio_ci": [
+          0.2823602557182312,
+          0.47752004861831665
+        ],
+        "clips_improved": 1.0
+      }
+    }
+  },
+  "online_audit": {
+    "freeway_fb_guided": {
+      "rollouts": 64,
+      "bias_pct": -3.716270245044717,
+      "bias_ci": [
+        -17.923647173846902,
+        13.35002132301324
+      ],
+      "rel_rmse_pct": 36.79401857221543,
+      "rmse_ci": [
+        30.352856981925054,
+        43.42732963606251
+      ]
+    },
+    "freeway_fb_random": {
+      "rollouts": 64,
+      "bias_pct": -0.2133901153001161,
+      "bias_ci": [
+        -22.180716494558087,
+        26.466257237740646
+      ],
+      "rel_rmse_pct": 40.61547258265138,
+      "rmse_ci": [
+        25.559264030442957,
+        54.33727277020587
+      ]
+    }
+  }
+}

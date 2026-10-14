@@ -1,0 +1,137 @@
+{
+  "baseline": "minecraft",
+  "clips": 16,
+  "videos": 10,
+  "runs": {
+    "minecraft": 3,
+    "feedback_guided": 2,
+    "feedback_random": 2,
+    "feedback_oracle": 2
+  },
+  "bins": {
+    "all": {
+      "feedback_guided": {
+        "drift": 0.038602858781814575,
+        "baseline_drift": 0.04855508357286453,
+        "ratio": 0.795032262802124,
+        "ratio_ci": [
+          0.6859071254730225,
+          0.9281072020530701
+        ],
+        "clips_improved": 0.75
+      },
+      "feedback_random": {
+        "drift": 0.04020148515701294,
+        "baseline_drift": 0.04855508357286453,
+        "ratio": 0.8279562592506409,
+        "ratio_ci": [
+          0.7646939754486084,
+          0.9418192505836487
+        ],
+        "clips_improved": 0.625
+      },
+      "feedback_oracle": {
+        "drift": 0.030237708240747452,
+        "baseline_drift": 0.04855508357286453,
+        "ratio": 0.6227506399154663,
+        "ratio_ci": [
+          0.54581218957901,
+          0.7278761267662048
+        ],
+        "clips_improved": 1.0
+      }
+    },
+    "within": {
+      "feedback_guided": {
+        "drift": 0.02882355824112892,
+        "baseline_drift": 0.03002345934510231,
+        "ratio": 0.9600345492362976,
+        "ratio_ci": [
+          0.8995916843414307,
+          1.0552117824554443
+        ],
+        "clips_improved": 0.5625
+      },
+      "feedback_random": {
+        "drift": 0.030413350090384483,
+        "baseline_drift": 0.03002345934510231,
+        "ratio": 1.012986183166504,
+        "ratio_ci": [
+          0.9433779716491699,
+          1.1069754362106323
+        ],
+        "clips_improved": 0.5625
+      },
+      "feedback_oracle": {
+        "drift": 0.021407293155789375,
+        "baseline_drift": 0.03002345934510231,
+        "ratio": 0.7130188941955566,
+        "ratio_ci": [
+          0.6136533617973328,
+          0.8348432779312134
+        ],
+        "clips_improved": 0.9375
+      }
+    },
+    "beyond": {
+      "feedback_guided": {
+        "drift": 0.046426303684711456,
+        "baseline_drift": 0.06338038295507431,
+        "ratio": 0.7325027585029602,
+        "ratio_ci": [
+          0.6008866429328918,
+          0.8889824151992798
+        ],
+        "clips_improved": 0.875
+      },
+      "feedback_random": {
+        "drift": 0.048031993210315704,
+        "baseline_drift": 0.06338038295507431,
+        "ratio": 0.7578368782997131,
+        "ratio_ci": [
+          0.6868767142295837,
+          0.902361273765564
+        ],
+        "clips_improved": 0.6875
+      },
+      "feedback_oracle": {
+        "drift": 0.03730203956365585,
+        "baseline_drift": 0.06338038295507431,
+        "ratio": 0.5885423421859741,
+        "ratio_ci": [
+          0.5112773776054382,
+          0.6913360953330994
+        ],
+        "clips_improved": 1.0
+      }
+    }
+  },
+  "online_audit": {
+    "feedback_guided": {
+      "rollouts": 32,
+      "bias_pct": -16.608449612242925,
+      "bias_ci": [
+        -23.12296806056441,
+        -4.9990279180461545
+      ],
+      "rel_rmse_pct": 27.86057402216467,
+      "rmse_ci": [
+        22.087132133895828,
+        32.97630408087862
+      ]
+    },
+    "feedback_random": {
+      "rollouts": 32,
+      "bias_pct": 0.9679210871660127,
+      "bias_ci": [
+        -10.633020882702478,
+        15.610414127192444
+      ],
+      "rel_rmse_pct": 33.177080367964024,
+      "rmse_ci": [
+        28.647875769169115,
+        37.56501110772441
+      ]
+    }
+  }
+}

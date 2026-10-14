@@ -1,0 +1,137 @@
+{
+  "baseline": "roadrunner",
+  "clips": 32,
+  "videos": 32,
+  "runs": {
+    "roadrunner": 3,
+    "roadrunner_fb_guided": 2,
+    "roadrunner_fb_random": 2,
+    "roadrunner_fb_oracle": 2
+  },
+  "bins": {
+    "all": {
+      "roadrunner_fb_guided": {
+        "drift": 0.013284286484122276,
+        "baseline_drift": 0.015313397161662579,
+        "ratio": 0.8674944043159485,
+        "ratio_ci": [
+          0.6675558090209961,
+          0.896848201751709
+        ],
+        "clips_improved": 0.90625
+      },
+      "roadrunner_fb_random": {
+        "drift": 0.010724872350692749,
+        "baseline_drift": 0.015313397161662579,
+        "ratio": 0.7003588080406189,
+        "ratio_ci": [
+          0.5739201307296753,
+          0.90189528465271
+        ],
+        "clips_improved": 0.96875
+      },
+      "roadrunner_fb_oracle": {
+        "drift": 0.00837620534002781,
+        "baseline_drift": 0.015313397161662579,
+        "ratio": 0.5469854474067688,
+        "ratio_ci": [
+          0.33677977323532104,
+          0.7823946475982666
+        ],
+        "clips_improved": 1.0
+      }
+    },
+    "within": {
+      "roadrunner_fb_guided": {
+        "drift": 0.007186120841652155,
+        "baseline_drift": 0.008097496815025806,
+        "ratio": 0.8874496817588806,
+        "ratio_ci": [
+          0.6764886379241943,
+          0.9046041369438171
+        ],
+        "clips_improved": 0.875
+      },
+      "roadrunner_fb_random": {
+        "drift": 0.006811222527176142,
+        "baseline_drift": 0.008097496815025806,
+        "ratio": 0.8411515951156616,
+        "ratio_ci": [
+          0.7933996915817261,
+          0.9122756123542786
+        ],
+        "clips_improved": 0.8125
+      },
+      "roadrunner_fb_oracle": {
+        "drift": 0.005786455236375332,
+        "baseline_drift": 0.008097496815025806,
+        "ratio": 0.7145980000495911,
+        "ratio_ci": [
+          0.37762579321861267,
+          0.7440048456192017
+        ],
+        "clips_improved": 0.90625
+      }
+    },
+    "beyond": {
+      "roadrunner_fb_guided": {
+        "drift": 0.019382454454898834,
+        "baseline_drift": 0.022529302164912224,
+        "ratio": 0.8603219985961914,
+        "ratio_ci": [
+          0.6239338517189026,
+          0.9030726552009583
+        ],
+        "clips_improved": 0.90625
+      },
+      "roadrunner_fb_random": {
+        "drift": 0.014638523571193218,
+        "baseline_drift": 0.022529302164912224,
+        "ratio": 0.6497548818588257,
+        "ratio_ci": [
+          0.3703204393386841,
+          0.9059146046638489
+        ],
+        "clips_improved": 0.9375
+      },
+      "roadrunner_fb_oracle": {
+        "drift": 0.010965956375002861,
+        "baseline_drift": 0.022529302164912224,
+        "ratio": 0.48674196004867554,
+        "ratio_ci": [
+          0.12823337316513062,
+          0.801689088344574
+        ],
+        "clips_improved": 1.0
+      }
+    }
+  },
+  "online_audit": {
+    "roadrunner_fb_guided": {
+      "rollouts": 64,
+      "bias_pct": -7.566498713728964,
+      "bias_ci": [
+        -42.69193828780945,
+        61.27061133552289
+      ],
+      "rel_rmse_pct": 58.207257365875755,
+      "rmse_ci": [
+        44.2925898530002,
+        73.25307330696485
+      ]
+    },
+    "roadrunner_fb_random": {
+      "rollouts": 64,
+      "bias_pct": 4.282482065157911,
+      "bias_ci": [
+        1.190040865900745,
+        10.012931654114691
+      ],
+      "rel_rmse_pct": 84.41180808815548,
+      "rmse_ci": [
+        55.51932130639529,
+        113.8040810454466
+      ]
+    }
+  }
+}

@@ -1,0 +1,169 @@
+method,clip,run,relative_variance
+Uniform (Horvitz-Thompson),0,0,0.0741749
+Uniform (Horvitz-Thompson),0,1,0.311321
+Uniform (Horvitz-Thompson),0,2,0.171398
+Uniform (Horvitz-Thompson),1,0,0.245046
+Uniform (Horvitz-Thompson),1,1,0.223168
+Uniform (Horvitz-Thompson),1,2,0.22027
+Uniform (Horvitz-Thompson),2,0,0.219863
+Uniform (Horvitz-Thompson),2,1,0.19849
+Uniform (Horvitz-Thompson),2,2,0.20826
+Uniform (Horvitz-Thompson),3,0,0.436477
+Uniform (Horvitz-Thompson),3,1,0.504583
+Uniform (Horvitz-Thompson),3,2,0.526504
+Uniform (Horvitz-Thompson),4,0,0.16251
+Uniform (Horvitz-Thompson),4,1,0.148315
+Uniform (Horvitz-Thompson),4,2,0.151933
+Uniform (Horvitz-Thompson),5,0,0.3732
+Uniform (Horvitz-Thompson),5,1,0.430211
+Uniform (Horvitz-Thompson),5,2,0.399024
+Uniform (Horvitz-Thompson),6,0,0.180098
+Uniform (Horvitz-Thompson),6,1,0.187981
+Uniform (Horvitz-Thompson),6,2,0.199563
+Uniform (Horvitz-Thompson),7,0,0.417761
+Uniform (Horvitz-Thompson),7,1,0.282552
+Uniform (Horvitz-Thompson),7,2,0.381279
+Uniform + CV[visual],0,0,0.0269022
+Uniform + CV[visual],0,1,0.146049
+Uniform + CV[visual],0,2,0.0924447
+Uniform + CV[visual],1,0,0.184646
+Uniform + CV[visual],1,1,0.170313
+Uniform + CV[visual],1,2,0.162133
+Uniform + CV[visual],2,0,0.13234
+Uniform + CV[visual],2,1,0.138668
+Uniform + CV[visual],2,2,0.188722
+Uniform + CV[visual],3,0,0.333388
+Uniform + CV[visual],3,1,0.406853
+Uniform + CV[visual],3,2,0.404261
+Uniform + CV[visual],4,0,0.0587356
+Uniform + CV[visual],4,1,0.05136
+Uniform + CV[visual],4,2,0.0414845
+Uniform + CV[visual],5,0,0.184915
+Uniform + CV[visual],5,1,0.332895
+Uniform + CV[visual],5,2,0.159928
+Uniform + CV[visual],6,0,0.371372
+Uniform + CV[visual],6,1,0.463448
+Uniform + CV[visual],6,2,0.288761
+Uniform + CV[visual],7,0,0.236457
+Uniform + CV[visual],7,1,0.247057
+Uniform + CV[visual],7,2,0.249288
+Smart + CV[visual],0,0,0.0818607
+Smart + CV[visual],0,1,0.110447
+Smart + CV[visual],0,2,0.0842329
+Smart + CV[visual],1,0,0.156094
+Smart + CV[visual],1,1,0.138388
+Smart + CV[visual],1,2,0.136151
+Smart + CV[visual],2,0,0.111109
+Smart + CV[visual],2,1,0.12009
+Smart + CV[visual],2,2,0.150189
+Smart + CV[visual],3,0,0.26054
+Smart + CV[visual],3,1,0.322331
+Smart + CV[visual],3,2,0.315719
+Smart + CV[visual],4,0,0.0644127
+Smart + CV[visual],4,1,0.113879
+Smart + CV[visual],4,2,0.0743471
+Smart + CV[visual],5,0,0.213842
+Smart + CV[visual],5,1,0.270393
+Smart + CV[visual],5,2,0.114008
+Smart + CV[visual],6,0,0.114012
+Smart + CV[visual],6,1,0.151311
+Smart + CV[visual],6,2,0.102324
+Smart + CV[visual],7,0,0.105649
+Smart + CV[visual],7,1,0.109424
+Smart + CV[visual],7,2,0.112021
+Negative control: CV[shuffled proxies],0,0,0.0739852
+Negative control: CV[shuffled proxies],0,1,0.311217
+Negative control: CV[shuffled proxies],0,2,0.171383
+Negative control: CV[shuffled proxies],1,0,0.245425
+Negative control: CV[shuffled proxies],1,1,0.224224
+Negative control: CV[shuffled proxies],1,2,0.220495
+Negative control: CV[shuffled proxies],2,0,0.220768
+Negative control: CV[shuffled proxies],2,1,0.199788
+Negative control: CV[shuffled proxies],2,2,0.202694
+Negative control: CV[shuffled proxies],3,0,0.436989
+Negative control: CV[shuffled proxies],3,1,0.50369
+Negative control: CV[shuffled proxies],3,2,0.527329
+Negative control: CV[shuffled proxies],4,0,0.161933
+Negative control: CV[shuffled proxies],4,1,0.149952
+Negative control: CV[shuffled proxies],4,2,0.152874
+Negative control: CV[shuffled proxies],5,0,0.381395
+Negative control: CV[shuffled proxies],5,1,0.438751
+Negative control: CV[shuffled proxies],5,2,0.391875
+Negative control: CV[shuffled proxies],6,0,0.181911
+Negative control: CV[shuffled proxies],6,1,0.1894
+Negative control: CV[shuffled proxies],6,2,0.201308
+Negative control: CV[shuffled proxies],7,0,0.416142
+Negative control: CV[shuffled proxies],7,1,0.306543
+Negative control: CV[shuffled proxies],7,2,0.356187
+Uniform + CV[visual+disagreement],0,0,0.120766
+Uniform + CV[visual+disagreement],0,1,0.0428771
+Uniform + CV[visual+disagreement],0,2,0.0489811
+Uniform + CV[visual+disagreement],1,0,0.0914983
+Uniform + CV[visual+disagreement],1,1,0.127932
+Uniform + CV[visual+disagreement],1,2,0.123853
+Uniform + CV[visual+disagreement],2,0,0.228954
+Uniform + CV[visual+disagreement],2,1,0.0367896
+Uniform + CV[visual+disagreement],2,2,0.342257
+Uniform + CV[visual+disagreement],3,0,0.345106
+Uniform + CV[visual+disagreement],3,1,0.40535
+Uniform + CV[visual+disagreement],3,2,0.403218
+Uniform + CV[visual+disagreement],4,0,0.0200478
+Uniform + CV[visual+disagreement],4,1,0.199939
+Uniform + CV[visual+disagreement],4,2,0.0830944
+Uniform + CV[visual+disagreement],5,0,0.140035
+Uniform + CV[visual+disagreement],5,1,0.15966
+Uniform + CV[visual+disagreement],5,2,0.156396
+Uniform + CV[visual+disagreement],6,0,0.0804161
+Uniform + CV[visual+disagreement],6,1,0.118004
+Uniform + CV[visual+disagreement],6,2,0.0710086
+Uniform + CV[visual+disagreement],7,0,0.0750707
+Uniform + CV[visual+disagreement],7,1,0.101941
+Uniform + CV[visual+disagreement],7,2,0.0796881
+Smart + CV[visual+disagreement],0,0,0.0771443
+Smart + CV[visual+disagreement],0,1,0.0307524
+Smart + CV[visual+disagreement],0,2,0.0379639
+Smart + CV[visual+disagreement],1,0,0.0619264
+Smart + CV[visual+disagreement],1,1,0.0805515
+Smart + CV[visual+disagreement],1,2,0.0839728
+Smart + CV[visual+disagreement],2,0,0.17455
+Smart + CV[visual+disagreement],2,1,0.0375193
+Smart + CV[visual+disagreement],2,2,0.243935
+Smart + CV[visual+disagreement],3,0,0.195471
+Smart + CV[visual+disagreement],3,1,0.222515
+Smart + CV[visual+disagreement],3,2,0.220729
+Smart + CV[visual+disagreement],4,0,0.0168983
+Smart + CV[visual+disagreement],4,1,0.106684
+Smart + CV[visual+disagreement],4,2,0.064485
+Smart + CV[visual+disagreement],5,0,0.101096
+Smart + CV[visual+disagreement],5,1,0.10886
+Smart + CV[visual+disagreement],5,2,0.111428
+Smart + CV[visual+disagreement],6,0,0.0387586
+Smart + CV[visual+disagreement],6,1,0.0532202
+Smart + CV[visual+disagreement],6,2,0.0428158
+Smart + CV[visual+disagreement],7,0,0.0379517
+Smart + CV[visual+disagreement],7,1,0.0866725
+Smart + CV[visual+disagreement],7,2,0.0601643
+Oracle Neyman (not deployable),0,0,0.019748
+Oracle Neyman (not deployable),0,1,0.0178091
+Oracle Neyman (not deployable),0,2,0.0167062
+Oracle Neyman (not deployable),1,0,0.0192197
+Oracle Neyman (not deployable),1,1,0.0231789
+Oracle Neyman (not deployable),1,2,0.0261628
+Oracle Neyman (not deployable),2,0,0.0893135
+Oracle Neyman (not deployable),2,1,0.0141844
+Oracle Neyman (not deployable),2,2,0.13624
+Oracle Neyman (not deployable),3,0,0.0109787
+Oracle Neyman (not deployable),3,1,0.0144277
+Oracle Neyman (not deployable),3,2,0.0130431
+Oracle Neyman (not deployable),4,0,0.00815105
+Oracle Neyman (not deployable),4,1,0.00897921
+Oracle Neyman (not deployable),4,2,0.0269455
+Oracle Neyman (not deployable),5,0,0.0267468
+Oracle Neyman (not deployable),5,1,0.0188087
+Oracle Neyman (not deployable),5,2,0.0336748
+Oracle Neyman (not deployable),6,0,0.0162573
+Oracle Neyman (not deployable),6,1,0.0253443
+Oracle Neyman (not deployable),6,2,0.0210187
+Oracle Neyman (not deployable),7,0,0.0142904
+Oracle Neyman (not deployable),7,1,0.00789596
+Oracle Neyman (not deployable),7,2,0.0142518

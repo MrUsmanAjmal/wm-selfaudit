@@ -1,0 +1,159 @@
+{
+  "a": "minecraft",
+  "b": "minecraft_steps100",
+  "clips": 16,
+  "videos": 10,
+  "bins": {
+    "all": {
+      "minecraft": {
+        "mean_error": 0.0485550839618976,
+        "error_over_disagreement": 2.173851831669598,
+        "ratio_ci": [
+          1.4267390360267593,
+          2.8155826409870293
+        ],
+        "disagreement_bias_pct": -38.00848474184136,
+        "bias_ci": [
+          -52.80774269973207,
+          -20.043760254095893
+        ],
+        "cv_var_ratio": 0.629892631722407,
+        "gain_ci": [
+          0.4757083721471342,
+          0.7684722632821954
+        ]
+      },
+      "minecraft_steps100": {
+        "mean_error": 0.049267836571601324,
+        "error_over_disagreement": 2.1127076512984293,
+        "ratio_ci": [
+          1.4548032349620683,
+          2.6413316839094683
+        ],
+        "disagreement_bias_pct": -36.7748287859224,
+        "bias_ci": [
+          -53.02607537265578,
+          -15.608917097246666
+        ],
+        "cv_var_ratio": 0.6195679867170367,
+        "gain_ci": [
+          0.47451044651473556,
+          0.7525231680337161
+        ]
+      },
+      "difference": {
+        "error_over_disagreement": -0.061144180371168755,
+        "ratio_ci": [
+          -0.38203988155868723,
+          0.25871229320645406
+        ],
+        "disagreement_bias_pct": 1.2336559559189553,
+        "bias_ci": [
+          -12.53114348077453,
+          14.875390888147521
+        ]
+      }
+    },
+    "within": {
+      "minecraft": {
+        "mean_error": 0.0300234604810757,
+        "error_over_disagreement": 1.9507932615359664,
+        "ratio_ci": [
+          1.2734805605318875,
+          2.599638393128238
+        ],
+        "disagreement_bias_pct": -24.41050899718902,
+        "bias_ci": [
+          -48.31576713608005,
+          2.6454989828501048
+        ],
+        "cv_var_ratio": 0.9140428738258324,
+        "gain_ci": [
+          0.6723438123408075,
+          1.3095604276940824
+        ]
+      },
+      "minecraft_steps100": {
+        "mean_error": 0.03112946373076723,
+        "error_over_disagreement": 1.9821016067526607,
+        "ratio_ci": [
+          1.3513114160979007,
+          2.675929301877614
+        ],
+        "disagreement_bias_pct": -29.744038632532877,
+        "bias_ci": [
+          -55.42341539868652,
+          -1.1111748178321583
+        ],
+        "cv_var_ratio": 0.8950907924259965,
+        "gain_ci": [
+          0.5726463609012653,
+          1.3936736539643422
+        ]
+      },
+      "difference": {
+        "error_over_disagreement": 0.03130834521669423,
+        "ratio_ci": [
+          -0.3770941905447944,
+          0.5868735270843699
+        ],
+        "disagreement_bias_pct": -5.333529635343856,
+        "bias_ci": [
+          -24.634724875130782,
+          8.577226774770592
+        ]
+      }
+    },
+    "beyond": {
+      "minecraft": {
+        "mean_error": 0.06338038274655512,
+        "error_over_disagreement": 2.2723145906990645,
+        "ratio_ci": [
+          1.4831280133055709,
+          2.988956833258863
+        ],
+        "disagreement_bias_pct": -39.328996231671695,
+        "bias_ci": [
+          -53.421634553289785,
+          -21.21687576614883
+        ],
+        "cv_var_ratio": 0.617549686134454,
+        "gain_ci": [
+          0.4416844856204431,
+          0.7721057374228522
+        ]
+      },
+      "minecraft_steps100": {
+        "mean_error": 0.0637785348442686,
+        "error_over_disagreement": 2.168501217516656,
+        "ratio_ci": [
+          1.4647527829087343,
+          2.6874504247743123
+        ],
+        "disagreement_bias_pct": -35.0708430386545,
+        "bias_ci": [
+          -52.189882018218064,
+          -12.425291608101604
+        ],
+        "cv_var_ratio": 0.6224212992292304,
+        "gain_ci": [
+          0.46723287948060277,
+          0.7664435834722146
+        ]
+      },
+      "difference": {
+        "error_over_disagreement": -0.10381337318240869,
+        "ratio_ci": [
+          -0.5325915072016205,
+          0.26984421550817667
+        ],
+        "disagreement_bias_pct": 4.258153193017194,
+        "bias_ci": [
+          -9.672654046305398,
+          19.728014920535312
+        ]
+      }
+    }
+  },
+  "verdict": "The over-confidence does not depend on the setting: the difference in error/disagreement is statistically indistinguishable from zero. Mean real error is 2.17x the model's disagreement with 'Minecraft, 50 steps' and 2.11x with 'Minecraft, 100 steps'; 1.00 would be a calibrated model."
+}
