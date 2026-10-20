@@ -3,7 +3,12 @@ imagined frame, one real patch of that frame is pasted into the rollout, so ever
 in view. The model's prediction of each frame (made before its patch is seen), the chosen patches and their
 sampling probabilities are saved.
 
-The sampling loop is the repository's own DiffusionForcingBase.validation_step, unchanged except for the paste."""
+The sampling loop is the repository's own DiffusionForcingBase.validation_step, unchanged except for the paste.
+
+Gaze policies: random, guided (motion of the imagined patch), oracle (largest true error, not deployable), and two that
+need a second rollout of the same clip: disagree (where the two rollouts differ most) and combo (high motion and high
+disagreement). For those, DF_PAIRED=1 and every clip appears twice in a row in DF_CLIPS; batch elements 2i and 2i+1 are
+the two rollouts of one clip and see each other's predictions. A suffix _eNN sets the uniform floor to NN%."""
 import json
 import os
 import runpy
@@ -17,9 +22,17 @@ CLIPS = json.loads(os.environ["DF_CLIPS"])
 GAZE = os.environ["DF_GAZE"]
 PATCH = int(os.environ.get("DF_PATCH", "32"))
 EPS = float(os.environ.get("DF_GAZE_EPS", "0.1"))
+PAIRED = os.environ.get("DF_PAIRED") == "1"
+TORCH_SEED = os.environ.get("DF_TORCH_SEED")
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
-if GAZE not in ("random", "guided", "oracle"):
+if "_e" in GAZE:
+    GAZE, EPS = GAZE.split("_e")[0], int(GAZE.split("_e")[1]) / 100
+if GAZE not in ("random", "guided", "oracle", "disagree", "combo"):
     raise SystemExit(f"unknown gaze policy '{GAZE}'")
+if GAZE in ("disagree", "combo") and not PAIRED:
+    raise SystemExit(f"gaze '{GAZE}' needs DF_PAIRED=1 (two rollouts of every clip in the batch)")
+if PAIRED and any(CLIPS[i] != CLIPS[i + 1] for i in range(0, len(CLIPS), 2)):
+    raise SystemExit("DF_PAIRED=1 needs every clip twice in a row in DF_CLIPS")
 
 import torch
 import torch.nn.functional as F
@@ -65,7 +78,15 @@ def choose(prev, cur, real):
     if GAZE == "random":
         q = torch.full((B, J), 1.0 / J)
     else:
-        s = patch_means((cur - prev).float() ** 2).sqrt().cpu() + 1e-12
+        motion = patch_means((cur - prev).float() ** 2).sqrt().cpu()
+        if GAZE == "guided":
+            s = motion
+        else:
+            partner = torch.arange(B) ^ 1  # the other rollout of the same clip
+            dis = patch_means((cur - cur[partner.to(cur.device)]).float() ** 2).sqrt().cpu()
+            norm = lambda v: v / (v.mean(1, keepdim=True) + 1e-12)
+            s = dis if GAZE == "disagree" else (norm(motion) * norm(dis)).sqrt()
+        s = s + 1e-12
         q = (1 - EPS) * s / s.sum(1, keepdim=True) + EPS / J
     j = torch.multinomial(q, 1, generator=_gen).squeeze(1)
     return j, q.gather(1, j[:, None]).squeeze(1)
@@ -77,6 +98,8 @@ def validation_step_with_gaze(self, batch, batch_idx, namespace="validation"):
         raise SystemExit("closed-loop gaze assumes frame_stack == 1")
     xs, conditions, masks = self._preprocess_batch(batch)
     n_frames, batch_size, *_ = xs.shape
+    if TORCH_SEED is not None:
+        torch.manual_seed(int(TORCH_SEED))  # the same sampling noise for every gaze policy: paired comparisons
     curr_frame = 0
 
     n_context_frames = self.context_frames // self.frame_stack

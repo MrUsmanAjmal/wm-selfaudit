@@ -1,9 +1,11 @@
 cff-version: 1.2.0
 message: "If you use this code or these results, please cite it as below."
-title: "Measuring and Correcting Rollout Drift in Diffusion World Models with Sparse Real Observations"
+title: "Unbiased Estimation and Active Correction of Rollout Drift in Diffusion World Models Using Sparse Real Observations"
 authors:
   - family-names: Usman
     given-names: Muhammad
-date-released: 2026-10-13
+    affiliation: "The Islamia University of Bahawalpur"
+date-released: 2026-10-20
+doi: 10.5281/zenodo.23500416
 license: MIT
 repository-code: "https://github.com/MrUsmanAjmal/wm-selfaudit"

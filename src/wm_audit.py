@@ -157,9 +157,10 @@ def relvar_uniform(e, mu):
     return float(((r - r.mean(1, keepdims=True)) ** 2).mean(1).sum() / (e.shape[0] ** 2 * e.mean() ** 2))
 
 
-def method_plan(units, pool, eps, seed=0):
+def method_plan(units, pool, eps, seed=0, frozen=False):
     """(mu, q) of every audit and the observation-free self-assessments, for every unit.
-    Predictors are fit on `pool` leaving out every unit of the test unit's video."""
+    Predictors are fit on `pool` leaving out every unit of the test unit's video. With frozen=True, `pool` comes from
+    separate videos: everything is fit once on it and applied unchanged to all units."""
     rng = np.random.default_rng(seed)
     feats = {"visual": FEATURES_VISUAL}
     if "disagreement" in units[0]["f"] and "disagreement" in pool[0]["f"]:
@@ -167,8 +168,8 @@ def method_plan(units, pool, eps, seed=0):
         if 1 + max(u["run"] for u in units) > 2 and "disagreement_pair" in pool[0]["f"]:
             feats["pair"] = FEATURES_PAIR
     plans, selfs = {}, {}
-    for v in sorted({u["video"] for u in units}):
-        train = [u for u in pool if u["video"] != v]
+    for v in [None] if frozen else sorted({u["video"] for u in units}):
+        train = pool if frozen else [u for u in pool if u["video"] != v]
         if not train:
             raise SystemExit("Leave-one-video-out fitting needs clips from at least 2 videos.")
         models = {k: fit_models(train, names) for k, names in feats.items()}
@@ -179,7 +180,7 @@ def method_plan(units, pool, eps, seed=0):
                 shrink[k] = min(SHRINK_GRID, key=lambda b: np.mean([relvar_uniform(e, b * m) for e, m in fitted]))
         models["shuffled"] = fit_models([shuffle_within_frames(u, FEATURES_VISUAL, rng) for u in train], FEATURES_VISUAL)
         for u in units:
-            if u["video"] != v:
+            if not frozen and u["video"] != v:
                 continue
             shp = u["e"].shape
             uni = np.full(shp, 1.0 / shp[1])
@@ -342,7 +343,9 @@ def md_table(header, rows):
     return "\n".join(lines)
 
 
-def analyze(data_root, out, eps=0.1, mc_reps=2000, B=5000):
+def analyze(data_root, out, eps=0.1, mc_reps=2000, B=5000, train_root=None, train_cond=None):
+    """With train_root/train_cond, every predictor, shrinkage weight and sampling rule is fit once on that condition
+    (separate videos) and frozen; the conditions in data_root are then only evaluated."""
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
@@ -371,18 +374,28 @@ def analyze(data_root, out, eps=0.1, mc_reps=2000, B=5000):
     if ref not in conds:
         raise SystemExit(f"The reference condition '{ref}' has no usable data.")
 
+    frozen_pool = None
+    if train_root:
+        tplan = json.load(open(os.path.join(train_root, "plan.json")))["conditions"][train_cond]
+        tclips = load_condition(os.path.join(train_root, train_cond))[0]
+        frozen_pool = build_units(tclips, tplan["patch"], context_frames(tclips))
+        frozen_label = f"{tplan['label']} ({len({c['video'] for c in tclips})} separate videos, frozen)"
+        print(f"frozen predictors: fit once on {len(tclips)} clips of '{train_cond}' in {train_root}")
     report, summary = [], dict(eps=eps, conditions={})
     for name, c in conds.items():
         fit_on = c["cfg"].get("fit_on", name)
-        if fit_on not in conds:
+        if frozen_pool is not None:
+            units, pool, fit_label = c["units"], frozen_pool, frozen_label
+        elif fit_on not in conds:
             print(f"{name}: predictors are fit on '{fit_on}', which has no data; skipped")
             continue
-        units = c["units"]
-        pool = conds[fit_on]["units"]
-        c["plans"], c["selfs"] = method_plan(units, pool, eps)
+        else:
+            units, pool = c["units"], conds[fit_on]["units"]
+            fit_label = f"'{conds[fit_on]['cfg']['label']}', leaving the evaluated video out"
+        c["plans"], c["selfs"] = method_plan(units, pool, eps, frozen=frozen_pool is not None)
         sets = cluster_sets([u["video"] for u in units], B=B)
         c["ev"] = {b: evaluate(units, c["plans"], c["selfs"], sl) for b, sl in c["bins"].items()}
-        s = dict(label=c["cfg"]["label"], fit_on=fit_on, clips=len(c["clips"]), videos=c["videos"], runs=c["R"],
+        s = dict(label=c["cfg"]["label"], fit_on=fit_on, fit_label=fit_label, clips=len(c["clips"]), videos=c["videos"], runs=c["R"],
                  frames=c["T"], context=c["n_ctx"], patch=c["P"], patches_per_frame=c["J"],
                  bins={b: [sl.start + 1, sl.stop] for b, sl in c["bins"].items()},
                  audits={b: audit_rows(ev, sets) for b, ev in c["ev"].items()},
@@ -414,8 +427,7 @@ def analyze(data_root, out, eps=0.1, mc_reps=2000, B=5000):
         report.append(f"## {s['label']}\n\n{s['clips']} clips from {s['videos']} videos x {s['runs']} rollouts; "
                       f"{s['frames'] - s['context']} imagined frames after {s['context']} real context frames; "
                       f"{s['patches_per_frame']} patches per frame, 1 inspected. Predictors fit on "
-                      f"'{conds[s['fit_on']]['cfg']['label']}', leaving the evaluated video out. "
-                      f"95% CIs resample whole videos.\n")
+                      f"{s['fit_label']}. 95% CIs resample whole videos.\n")
         report.append(md_table(["Audit (1 real patch per frame)", "Relative error (%)", "95% CI", "Variance vs uniform",
                                 "95% CI", "Equivalent budget", "Max bias (%)"],
                                [[r["method"], f"{r['rel_rmse_pct']:.1f}", f"{r['ci_lo']:.1f}-{r['ci_hi']:.1f}",
@@ -1067,13 +1079,15 @@ if __name__ == "__main__":
     ap.add_argument("--a")
     ap.add_argument("--b")
     ap.add_argument("--conds", nargs="*", default=[])
+    ap.add_argument("--train-data", help="analyze: fit and freeze the predictors on this data folder instead")
+    ap.add_argument("--train-cond", default="minecraft", help="analyze: condition in --train-data to fit on")
     a = ap.parse_args()
     if a.cmd == "selftest":
         selftest()
     elif a.cmd == "inspect":
         inspect(a.data)
     elif a.cmd == "analyze":
-        analyze(a.data, a.out, a.eps)
+        analyze(a.data, a.out, a.eps, train_root=a.train_data, train_cond=a.train_cond)
     elif a.cmd == "compare":
         compare(a.data, a.out, a.a, a.b, a.eps)
     else:
